@@ -36,6 +36,15 @@ public class LineBreakContext {
     private int _width;
     private boolean _endsOnNL;
     private Text _textNode;
+    private boolean _lineContainsContent;
+    
+    public boolean isLineContainsContent() {
+	    return _lineContainsContent;
+    }
+    
+    public void setLineContainsContent(boolean containsContent) {
+	    _lineContainsContent = containsContent;
+    }
     
     public int getLast() {
         return _master.length();
