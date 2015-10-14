@@ -146,7 +146,7 @@ public class Breaker {
         }
 
         context.setNeedsNewLine(true);
-        if ( lastWrap == 0 && style.getWordWrap() == IdentValue.BREAK_WORD ) {
+        if ( lastWrap == 0 && style.getWordWrap() == IdentValue.BREAK_WORD && !context.isLineContainsContent() ) {
             if ( ! tryToBreakAnywhere ) {
                 doBreakText(c, context, avail, style, true);
                 return;
