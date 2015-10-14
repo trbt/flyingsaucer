@@ -197,6 +197,7 @@ public class InlineBoxing {
                         needFirstLetter = false;
                     } else {
                         lbContext.saveEnd();
+                        lbContext.setLineContainsContent(currentLine.isContainsContent());
                         InlineText inlineText = layoutText(
                                 c, iB.getStyle(), remainingWidth - fit, lbContext, false);
                         if (lbContext.isUnbreakable() && ! currentLine.isContainsContent()) {
